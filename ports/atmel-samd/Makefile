@@ -389,6 +389,8 @@ SRC_SHARED_MODULE = \
 	busio/OneWire.c \
 	gamepad/__init__.c \
 	gamepad/GamePad.c \
+	mymodule/__init__.c \
+	mymodule/MyClass.c \
 	_stage/__init__.c \
 	_stage/Layer.c \
 	_stage/Text.c \
