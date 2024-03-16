@@ -108,6 +108,9 @@ endif
 ifeq ($(CIRCUITPY_AUDIOIO),1)
 SRC_PATTERNS += audioio/%
 endif
+ifeq ($(CIRCUITPY_MYMODULE),1)
+SRC_PATTERNS += mymodule/%
+endif
 ifeq ($(CIRCUITPY_AUDIOPWMIO),1)
 SRC_PATTERNS += audiopwmio/%
 endif
@@ -480,6 +483,8 @@ SRC_SHARED_MODULE_ALL = \
 	vectorio/Rectangle.c \
 	vectorio/VectorShape.c \
 	vectorio/__init__.c \
+	mymodule/__init__.c \
+	mymodule/MyClass.c \
 
 # All possible sources are listed here, and are filtered by SRC_PATTERNS.
 SRC_SHARED_MODULE = $(filter $(SRC_PATTERNS), $(SRC_SHARED_MODULE_ALL))
